@@ -2,10 +2,11 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import { StyleSheet, Text, View, Button,Image } from 'react-native';
+import { StyleSheet, Text, View, Button,Image, SafeAreaView } from 'react-native';
 
 import AboutScreen from './About'
 import LoginPageScreen from './LoginPage'
+import ProfileScreen from './Profile'
 
 const Stack = createNativeStackNavigator();
 
@@ -23,7 +24,7 @@ const MyStack = ({}) => {
 
         <Stack.Screen name="About" component={AboutScreen} />
         <Stack.Screen name="SignUp" component={LoginPageScreen} />
-
+        <Stack.Screen name="Profile" component={ProfileScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -58,6 +59,14 @@ const HomeScreen = ({ navigation }) => {
             navigation.navigate('SignUp')
           }
         />
+        <Button
+            title="Profile"
+            color="lightgreen"
+          onPress={() =>
+            navigation.navigate('Profile')
+          }
+        />
+          
         </View>
         </View>
     <View style = {{flex:12, flexDirection:'row',}}>
