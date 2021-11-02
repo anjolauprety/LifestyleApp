@@ -1,28 +1,32 @@
 import React from 'react';
-import { StyleSheet, Text, View,Button, Image, TextInput } from 'react-native';
-
+import { StyleSheet, Text, View,Button, Image, TextInput,ScrollView } from 'react-native';
+const image = {uri:'https://vidafitness.com/wp-content/uploads/2017/11/2b-min-1024x683.jpeg',
+              width:500,
+            height:300}
 // const App = () => {...}
 export default function App() {
   return (
+<ScrollView>
     <View style={styles.container}>
 
       <View style={{flex:1, backgroundColor:'white', }}>
         <View style={{flexDirection:'row'}}>
           <Text style={styles.header}>
-              LIFESTYLE
-          <Text style = {{fontSize:12, color:'black'}}> Already have an account?
+              LIFESTYLE </Text>
+          <View style = {{flex:1, flexDirection:'row'}}>
+          <Text style = {{fontSize:10, color:'black'}}> Already have an account?
             <Button title="Login" color="lightgreen"/>
             </Text>
-            </Text>
+          </View>
         </View>
         </View>
 
 
-      <View style={{flex:9,flexDirection:'row'}}>
+      <View style={{flex:9,flexDirection:'column'}}>
 
          <Image
              style={{width:"70%"}}
-             source={{uri:'	https://vidafitness.com/wp-content/uploads/2017/11/2b-min-1024x683.jpeg'}}/>
+             source={image}/>
           <View style={styles.formBox}>
             <Text style={{fontSize:20, fontWeight:'bold', marginBottom:10}}> Select your plan </Text>
             <View style={styles.twoButtons}>
@@ -43,7 +47,7 @@ export default function App() {
         </View>
       </View>
       </View>
-
+</ScrollView>
 
 
   )
@@ -52,28 +56,28 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'stretch',
-    justifyContent: 'stretch',
+    //alignItems: 'stretch',
+    //justifyContent: 'stretch',
     flexDirection:'column',
-    borderWidth:5,
+    //borderWidth:5,
     margin:'0.5%',
   },
   header: {
     flex:1,
     justifyContent:'space-between',
-    fontSize:30,
-    fontFamily:'Kodiac',
-    padding:25,
+    fontSize:24,
+    fontFamily:'Al Nile',
+    //padding:25,
     color:"lightgreen",
   },
     formBox:{
     flex:1,
     flexDirection:'column',
-    alignItems: 'stretch',
-    justifyContent: 'stretch',
+    //alignItems: 'stretch',
+    //justifyContent: 'stretch',
     backgroundColor:'white',
     width:'100%',
-    padding:20
+    //padding:20
   },
     input:{
     backgroundColor: 'white',
@@ -86,7 +90,7 @@ const styles = StyleSheet.create({
       color: 'lightgreen',
       width:'100%',
       padding: 10,
-      alignself:'stretch',
+      //alignself:'stretch',
       color:'black',
       fontWeight:'bold',
     },
