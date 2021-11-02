@@ -11,7 +11,13 @@ import React, { useState, useEffect } from "react";
 import { Button, StyleSheet, Text, TextInput, Image, Platform, View } from "react-native";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import * as ImagePicker from 'expo-image-picker';
+import {ReactDOM} from 'react-dom';
 
+const Hello = () => {
+  ReactDom.render();{
+  return ( <Text> Hello Anjola </Text> )
+}
+}
 const Profile = (props) => {
   const [info, setInfo] = useState({name:'',email:''});
   const [name, setName] = useState('');
@@ -123,6 +129,7 @@ const Profile = (props) => {
 
 
 
+  render(){
       return (
 
             <View style={styles.container}>
@@ -200,6 +207,7 @@ const Profile = (props) => {
             </View>
       );
     }
+}
   const styles = StyleSheet.create ({
     container: {
       flex: 1,
