@@ -129,7 +129,7 @@ const Profile = (props) => {
 
 
 
-  render(){
+  render();{
       return (
 
             <View style={styles.container}>
