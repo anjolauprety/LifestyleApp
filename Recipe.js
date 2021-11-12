@@ -1,8 +1,8 @@
 import React from 'react';
 import { SafeAreaView, ScrollView, View, FlatList, StyleSheet, Text, StatusBar, Image } from 'react-native';
-import Omelets from '../assets/omelets'
+import Recipe from '../assets/Recipe'
 
-const omeletRecipes = Omelets()
+const omeletRecipes = Recipe()
 
 const DATA = omeletRecipes.map((x) => {
   x.id = x.href
