@@ -129,7 +129,7 @@ const Profile = (props) => {
 
 
 
-  render();{
+
       return (
 
             <View style={styles.container}>
@@ -207,7 +207,7 @@ const Profile = (props) => {
             </View>
       );
     }
-}
+
   const styles = StyleSheet.create ({
     container: {
       flex: 1,
