@@ -2,11 +2,12 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import { StyleSheet, Text, View, Button,ImageBackground,SafeAreaView} from 'react-native';
+import { StyleSheet, Text, View, Button,ImageBackground,SafeAreaView, Flatlist,ScrollView} from 'react-native';
 
 import AboutScreen from './About'
 import LoginPageScreen from './LoginPage'
 import ProfileScreen from './Profile'
+import Recipe from './Recipe'
 const Stack = createNativeStackNavigator();
 const image = { uri:"https://cdn2.coachmag.co.uk/sites/coachmag/files/styles/16x9_480/public/shutterstock_151938761.jpg?itok=YZlOdXuX&timestamp=1417110661"};
 const MyStack = ({}) => {
@@ -21,6 +22,7 @@ const MyStack = ({}) => {
         <Stack.Screen name="About" component={AboutScreen} />
         <Stack.Screen name="LoginPage" component={LoginPageScreen} />
         <Stack.Screen name="Profile" component={ProfileScreen} />
+        <Stack.Screen name="Recipe" component={Recipe}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -50,6 +52,12 @@ const HomeScreen = ({ navigation }) => {
             navigation.navigate('Profile')
           }
         />
+        <Button
+            title="Our Recipes"
+          onPress={() =>
+            navigation.navigate('Recipe')
+          }
+        />
         </ImageBackground>
   </View>
   );
@@ -58,7 +66,7 @@ const styles = StyleSheet.create({
     container: {
     flex: 1,
       flexDirection:'column',
-      justifyContent: 'center',
+      //justifyContent: 'center',
       //alignItems:'center',
   },
  image: {
@@ -78,4 +86,5 @@ const styles = StyleSheet.create({
 //};
 
 export default MyStack;
+
 
