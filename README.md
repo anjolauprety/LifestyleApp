@@ -7,4 +7,4 @@ Lifestyle is a personal training app created to improve health and fitness journ
 
 Note: This app was created using reactnative framework using javascript. It can be run on both webbrowser and mobile phone. Used reactnavigator, asynchronous events, flatlists, useState, useEffect, different stylesheets.
 
-Link to your movie - 
+Link to your movie - https://drive.google.com/file/d/1SVdQosrAeJFdUGLBVkRvkTsq2dMHB_mC/view?usp=sharing
